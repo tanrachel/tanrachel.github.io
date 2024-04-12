@@ -11,11 +11,12 @@ export const dialogueData = {
     tv: `That's my TV. Here's what get's recommended to me on Youtube: 
      <a href="https://youtube.com/shorts/laNeJ7gu85E?si=9Q62_UtRn8oUCb48" target="_blank">funny video</a>`,
     bed: `This where I sleep. I have dreams of errors from my terraform IaC scripts. `,
-    resume: `This is my desk and on it is my resume. <a href="./assets/resume_Rachel_v2.pdf" target="_blank">Check it out?</a>
+    resume: `This is my desk and on it is my resume. <a href="./resume_Rachel_v2.pdf" target="_blank">Check it out?</a>
     Quick TLDR: 2 years software engineering, 3 years in analytics. Here's my list of tech stack: Golang, Python, Java, SQL, Terraform, Docker
     ,... and more!`,
     projects: `Info about this portfolio : I followed this tutorial <a href="https://youtube.com/@jslegenddev" target="_blank">here</a>.`,
-    library: `I have a lot resources in my library. If you are interested in going into software, I recommend checking out: <a href="./sde/sde_resources.html">SDE Resources</a>
+    library: `I have a lot resources in my library. If you are interested in going into software, I recommend checking out:
+     <a href="./sde/sde_resources.html">SDE Resources</a>
     If you are interested in grad school, I recommend checking out: <a href="./project-pages/gradschool_tips.html">Grad School Resources</a>`,
     exit: `If you want to exit Rachel's portfolio, just close the tab.`,
     bunny: `Hi! I'm a bunny! Let me know if you know of any cool software engineering opportunities for Rachel!`,
