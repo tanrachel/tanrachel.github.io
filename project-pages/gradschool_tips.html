@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Grad School Tips</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ad72bed4-0f18-4900-906a-948be6d23e63" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👩🏻‍🎓</span></div><h1 class="page-title">Grad School Tips</h1></header><div class="page-body"><nav id="3e86e4af-9546-418a-824e-d02a1a893869" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e03d85f9-6312-4674-b1c8-dda8ca81fb0d">Context</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9b01a3c6-78c2-4127-bcac-66ed5eb3998e">Background</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b6b4b2ec-cbae-426c-b780-be81b3d3f239">College Applications</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bc752099-8e42-4ad0-95d6-db82046dd01b">List of Programs </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#06e7925e-33a1-460f-83aa-e2e05ce5978e">GRE/GMAT </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#12c806b7-18ef-400c-860b-010a68443df2">GRE </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c21b8406-c910-496d-96b6-fa1f2ac5ec79">Statement Of Purpose </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5528d8bc-fd47-4c66-9187-4c3a7f93c84d">Letters of Recommendation</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#273dfcd7-565d-4a17-b36a-66c76d3158ef">Organization</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#cf153229-3130-4d1a-9a3e-79986eaaadce">Admission Results </a></div></nav><h1 id="e03d85f9-6312-4674-b1c8-dda8ca81fb0d" class="">Context</h1><p id="79d429fc-6d2a-4358-b3c3-c1d7e3584095" class="">The aim of this is to share my journey going through graduate school applications. I realized as I was preparing my application there was a lot of things I wasn’t sure about such as LORs (letters of recommendations) or statement of purpose. I will share my background/timeline and hopefully that is useful to you. </p><h1 id="9b01a3c6-78c2-4127-bcac-66ed5eb3998e" class="">Background</h1><p id="ce24cfa5-d4b6-4e72-a11b-8a57959ea74b" class="">A little about my profile. </p><p id="8b6d8d8a-c8b0-444f-a4db-4b0f1885b7c3" class="">I graduated from University of Washington with a degree in Civil Engineering with quite a low gpa. Straight out of college I decided to pursue my love of data and changed career to analytics. I worked as an analyst for 3 years at an e-commerce company. Afterwards, I took a year off to go to prepare GRE(322/159V/164Q), go to bootcamp and internship. I joined as a full time developer in the same team I interned at. I have 10 online certificates on python/java/datastructures from coursera under my belt, mentored other bootcamp students and volunteer at developer groups. </p><figure id="d4925fd6-71b4-4a07-b974-2c7f344aad08" class="image"><a href="../assets/images/gradschool_timeline.png"><img style="width:1562px" src="../assets/images/gradschool_timeline.png"/></a></figure><h1 id="b6b4b2ec-cbae-426c-b780-be81b3d3f239" class="">College Applications</h1><h2 id="bc752099-8e42-4ad0-95d6-db82046dd01b" class="">List of Programs </h2><p id="bba3293d-a618-4a79-b394-957bfeced89b" class="">Prior to even starting application, you should do research on what kind of program you want to apply to. How I found programs: <div class="indented"><ul id="7accac9c-1f88-4026-aa45-65c7b0d139aa" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.mastersportal.com/">masterportal</a> - this site aggregates a lot programs by country and interest </li></ul><ul id="578c13ae-e9a1-4e44-ade1-8bae79c22cd3" class="bulleted-list"><li style="list-style-type:disc">word of mouth - personally a lot of the programs I applied are from schools people around me have attended. I would enter the school website and start looking through their graduate programs and curriculum <ul id="68c3dfcd-6c78-4774-847d-c3985e2b2e83" class="bulleted-list"><li style="list-style-type:circle">It’s easier to find programs if you have a list of priorities of what you want out of a program. For me personally, I looked for programs that offered courses Java, C++, operating systems, big data services </li></ul></li></ul></div></p><h2 id="06e7925e-33a1-460f-83aa-e2e05ce5978e" class="">GRE/GMAT </h2><p id="14eb7595-cb82-4f49-8dc0-8a244447d587" class="">A lot of programs now waive this. I still chose to submit GRE since my gpa from undergrad were not the greatest. GRE scores are a way to showcase your academic profile. So the difference between GRE and GMAT:</p><table id="eeefe528-1f77-4ca1-b81f-168ed53c362c" class="simple-table"><tbody><tr id="e727f96c-37c4-4828-949f-4ee2788ad634"><td id="][GI" class="">section</td><td id="jVOK" class="" style="width:268px">GRE</td><td id="tAsI" class="" style="width:284px">GMAT</td></tr><tr id="b9d3c35a-53d5-4ea3-93bb-732c76b90537"><td id="][GI" class="">Verbal</td><td id="jVOK" class="" style="width:268px">focuses on reasoning, a lot of times, it’s long paragraphs and multiple choices are choosing what the purpose of the paragraph is intended </td><td id="tAsI" class="" style="width:284px">base on the 3 days I spent looking at GMAT practice problems, the problems are more focused on grammar, such as where (;,.) should be placed. </td></tr><tr id="74d2596c-619c-41a3-9ae1-603556c2a232"><td id="][GI" class="">Math</td><td id="jVOK" class="" style="width:268px">This section covers algebra, probability, geometry</td><td id="tAsI" class="" style="width:284px">don’t remember the math portion, but I think it was similar to GRE Math section.</td></tr><tr id="f22331ca-2222-488c-b5e1-5bb1988f5b11"><td id="][GI" class="">Use case</td><td id="jVOK" class="" style="width:268px">most programs esp engineering programs will request GRE</td><td id="tAsI" class="" style="width:284px">business schools will request GMAT </td></tr></tbody></table><h3 id="12c806b7-18ef-400c-860b-010a68443df2" class="">GRE </h3><p id="70f15f12-76cf-483f-afe2-ff568a42c20a" class="">Since I personally took GRE, I can only speak to the details of GRE. <div class="indented"><ul id="5b20be75-46de-4d68-8056-f0c1414c7b29" class="bulleted-list"><li style="list-style-type:disc">Preparation: I took about roughly 3 months to prepare for the GRE. What this entailed was subscription to <a href="https://gre.magoosh.com/">Magoosh</a> and did 600 practice questions each for verbal and quantitative sections. </li></ul><ul id="8c5c3169-bd7f-40b3-a64b-354064647122" class="bulleted-list"><li style="list-style-type:disc">On the day of the exam: I registered at a test center on <a href="https://www.ets.org/">ETS</a> roughly 1-2 weeks prior to taking the exam. My exam started at 8am. GRE exams are 4 hours long, with a 10 minute break in the middle. They required a valid ID such as passport. No materials are allowed to be brought in, the center provides scrap paper and pens. They will place all test takers in a room with computers with a procter if you require any assistance. The exam is conducted on the computer. </li></ul><ul id="6378b481-3b36-4e55-ac0e-58bae9beb55c" class="bulleted-list"><li style="list-style-type:disc">GRE components: <ul id="0946a2e4-68ed-4f7f-9600-1f155afa0778" class="bulleted-list"><li style="list-style-type:circle">Analytical writing - 2 x 30 minute section, a prompt is given and you write an essay on your argument. </li></ul><ul id="6e4b296a-934d-43f1-a1a3-a639577b37fa" class="bulleted-list"><li style="list-style-type:circle">Verbal Reasoning - 2 x 30 minute section, 20 questions per question. Generally, vocabulary memorization will help in this section, the question prompts can get quite long and complex, and having more vocabulary at disposal will aid in understanding the prompt. </li></ul><ul id="7d69f0db-f813-4106-a338-9adea52a1459" class="bulleted-list"><li style="list-style-type:circle">Quantitative - 2 x 35 minute section, 20 questions per question. Covers algebra, probability and geometry. </li></ul></li></ul><ul id="7f579605-3497-459c-845b-5283bdbad61b" class="bulleted-list"><li style="list-style-type:disc">Sending in your scores to school<ul id="65855cf1-48bf-49a2-8cf4-424958ea79b3" class="bulleted-list"><li style="list-style-type:circle">You will know your scores immediately after you complete your exams except the analytical writing portion section. The official score report comes out a couple days later and you can request ETS to send scores to your school. The school will provide the program codes for ETS to send to a specific department. </li></ul></li></ul><ul id="bae37a61-2ca4-47a8-98e4-c6e07bd6e8b4" class="bulleted-list"><li style="list-style-type:disc">What your scores mean <ul id="2115be39-ae94-441c-838a-772d35671a7b" class="bulleted-list"><li style="list-style-type:circle">Quantitative and Verbal Reasonings are scored from 130-170 each, so full score is 340. Analytical writing is scored out of 5.0. </li></ul><ul id="6f439995-8746-4e0e-ba67-8aa3112b84bd" class="bulleted-list"><li style="list-style-type:circle">Base on the year, the percentile of your scores could differ - this is one aspect to judging your scores, top programs look for 90% percentile scores. </li></ul><ul id="3fa8fc4f-c26b-4ec2-9a56-605d2b363625" class="bulleted-list"><li style="list-style-type:circle">But base on my general research and understanding, scores generally should be &gt;300 as that indicates you got 50% of the problems correctly. A score of ~315 seems to be a solid score, ~325 is a good score and 330+ seems to be Ivy league tier. </li></ul></li></ul></div></p><h2 id="c21b8406-c910-496d-96b6-fa1f2ac5ec79" class="">Statement Of Purpose </h2><p id="86b08607-c699-4936-8684-826c4292dbb0" class="">For my statement of purpose, I was recommended to explain why my college gpa was so low. I chose to draw parallel between software development and my struggles with civil engineering. Just like how software engineering, generalized, is built on if/else statements, civil engineering is built on physics, which I had never taken a single course in my life prior to taking my first ever engineering introduction to physics at college, hence my struggles in it. </p><p id="896f7f3e-c107-4c70-8132-bed5f2579f07" class="">I talked about overcoming my struggles in schools, and how I fell in love with data and technology and most importantly, how I have set myself up for success in grad school by taking online courses and achieving full scores in them. I also included what I intend to bring to the school, my volunteer and mentorship experiences is what I wish to continue in grad school as well, especially helping others who want to make the jump into the tech field. </p><h2 id="5528d8bc-fd47-4c66-9187-4c3a7f93c84d" class="">Letters of Recommendation</h2><p id="cae83e2d-4bfa-488e-8ea0-f1eb04982dca" class="">Most programs will require 2-3 letters of recommendation. In your application, they will request you to fill out your recommenders email and their connection to you. In general, recommenders should be your professor or colleague, someone who has worked closely with you and can attest to your academic/professional experience. Once you enter their information, the system will then send your recommenders a link for them to upload their letter of recommendation. I recommend informing your recommenders 1 month prior to the application deadline so they have enough time to draft the letter and submit it. </p><h1 id="273dfcd7-565d-4a17-b36a-66c76d3158ef" class="">Organization</h1><figure id="5c24a597-8639-49af-9385-da4200bd22a0" class="image"><a href="../assets/images/gradschool_organization.png"><img style="width:1691px" src="../assets/images/gradschool_organization.png"/></a></figure><p id="8051b51c-3cfa-4305-9544-8268730085b7" class="">I recommend keeping a file system for your entire graduate school application: </p><ul id="7b08732c-cdbe-441e-8b13-b2f80f70fa05" class="bulleted-list"><li style="list-style-type:disc">List of Graduate Programs: an excel sheet that lists program name, website, application site, application deadlines, track whether the school has received your transcript, GRE, letters of recommendation</li></ul><ul id="d5cd3dc2-a152-4866-8b94-4ad0673da492" class="bulleted-list"><li style="list-style-type:disc">Files to have on hand: <ul id="f371df1b-618e-4226-94c9-cc0bb920027e" class="bulleted-list"><li style="list-style-type:circle">unofficial transcripts: a lot of programs will accept unofficial transcripts on the application and request official transcripts once admission results is out </li></ul><ul id="5f45a64e-f9c8-4ea4-83af-5b5abb340064" class="bulleted-list"><li style="list-style-type:circle">resume: part of the application will ask for your professional experience, having an updated copy will make it easy </li></ul><ul id="6a97cc56-5647-4b18-a01e-a0a2de217806" class="bulleted-list"><li style="list-style-type:circle">unofficial GRE scores: some programs will ask you to either self report or accept unofficial scores, so download your report from ETS and have them on hand for ease of use </li></ul><ul id="6899616a-8b66-4288-8bfc-4940558e425b" class="bulleted-list"><li style="list-style-type:circle">certificates: if you have certificates from online scores, i recommend aggregating all them into a pdf to be submitted under additional information section on your application </li></ul></li></ul><ul id="8578e104-1456-4ecf-8c87-41c325388dbe" class="bulleted-list"><li style="list-style-type:disc">Letters of Recommendations <ul id="e475f9be-af64-46d7-b510-f97c5d010544" class="bulleted-list"><li style="list-style-type:circle">A lot of my recommenders have expressed uncertainty on how to write a letter of recommendation, so I recommend preparing a package for them so it’s clear and easy for them</li></ul><ul id="9270af3c-693a-49e7-a52f-d1f62b7cb448" class="bulleted-list"><li style="list-style-type:circle">What to provide: <ul id="02cad411-2d55-40a7-915c-d6053dcfcd02" class="bulleted-list"><li style="list-style-type:square">An explanation of your request on what you would like your recommender to focus on when writing your letter of recommendation, what they should expect and to look out for the email link to upload the letter of recommendation. </li></ul><ul id="28d50085-4078-4b11-ad23-90344e3070d5" class="bulleted-list"><li style="list-style-type:square">Template for letter of recommendation, I highlight and put in [insert here] so it becomes clear where in the template they can add in their recommendation. This is just a general guide so your recommenders have an idea to start the letter. <ul id="2440613a-d6cf-49a1-a71e-47903ae05f2a" class="bulleted-list"><li style="list-style-type:disc">If you google “letter of recommendation templates” there are a lot online, I chose to stitch together parts of different templates I liked as my template for my own recommenders. </li></ul></li></ul></li></ul></li></ul><h1 id="cf153229-3130-4d1a-9a3e-79986eaaadce" class="">Admission Results </h1><p id="eb07e92c-46e6-43cc-a2f9-cea0ad957b0e" class="">Once you have submitted your application, it’s a waiting game. This is where having your excel sheet of programs comes into handy; you have the application link in a centralized location so checking on your application is easier. </p><p id="8b14f1ba-501f-4b19-944c-16a0780cc9f0" class="">In general, you should receive an email when the decision is posted on the portal. Decisions will only come out after the application deadline unless it’s rolling admission programs. In my experience, it generally takes about 6 weeks from the admissions team starting to review it to make a decision. </p></div></article></body></html>

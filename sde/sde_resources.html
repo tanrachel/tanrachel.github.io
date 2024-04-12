@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SDE Resources</title><style>
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+	html {
+		-webkit-print-color-adjust: exact;
+	}
+	* {
+		box-sizing: border-box;
+		-webkit-print-color-adjust: exact;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
+	}
+	
+	body {
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+	
+	a,
+	a.visited {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	.pdf-relative-link-path {
+		font-size: 80%;
+		color: #444;
+	}
+	
+	h1,
+	h2,
+	h3 {
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0.75em;
+	}
+	
+	h1 {
+		font-size: 1.875rem;
+		margin-top: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+		margin-top: 1.25rem;
+	}
+	
+	.source {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 1.5em;
+		word-break: break-all;
+	}
+	
+	.callout {
+		border-radius: 3px;
+		padding: 1rem;
+	}
+	
+	figure {
+		margin: 1.25em 0;
+		page-break-inside: avoid;
+	}
+	
+	figcaption {
+		opacity: 0.5;
+		font-size: 85%;
+		margin-top: 0.5em;
+	}
+	
+	mark {
+		background-color: transparent;
+	}
+	
+	.indented {
+		padding-left: 1.5em;
+	}
+	
+	hr {
+		background: transparent;
+		display: block;
+		width: 100%;
+		height: 1px;
+		visibility: visible;
+		border: none;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	@media only print {
+		img {
+			max-height: 100vh;
+			object-fit: contain;
+		}
+	}
+	
+	@page {
+		margin: 1in;
+	}
+	
+	.collection-content {
+		font-size: 0.875rem;
+	}
+	
+	.column-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.column {
+		padding: 0 1em;
+	}
+	
+	.column:first-child {
+		padding-left: 0;
+	}
+	
+	.column:last-child {
+		padding-right: 0;
+	}
+	
+	.table_of_contents-item {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.3;
+		padding: 0.125rem;
+	}
+	
+	.table_of_contents-indent-1 {
+		margin-left: 1.5rem;
+	}
+	
+	.table_of_contents-indent-2 {
+		margin-left: 3rem;
+	}
+	
+	.table_of_contents-indent-3 {
+		margin-left: 4.5rem;
+	}
+	
+	.table_of_contents-link {
+		text-decoration: none;
+		opacity: 0.7;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	}
+	
+	table,
+	th,
+	td {
+		border: 1px solid rgba(55, 53, 47, 0.09);
+		border-collapse: collapse;
+	}
+	
+	table {
+		border-left: none;
+		border-right: none;
+	}
+	
+	th,
+	td {
+		font-weight: normal;
+		padding: 0.25em 0.5em;
+		line-height: 1.5;
+		min-height: 1.5em;
+		text-align: left;
+	}
+	
+	th {
+		color: rgba(55, 53, 47, 0.6);
+	}
+	
+	ol,
+	ul {
+		margin: 0;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	
+	li > ol:first-child,
+	li > ul:first-child {
+		margin-block-start: 0.6em;
+	}
+	
+	ul > li {
+		list-style: disc;
+	}
+	
+	ul.to-do-list {
+		text-indent: -1.7em;
+	}
+	
+	ul.to-do-list > li {
+		list-style: none;
+	}
+	
+	.to-do-children-checked {
+		text-decoration: line-through;
+		opacity: 0.375;
+	}
+	
+	ul.toggle > li {
+		list-style: none;
+	}
+	
+	ul {
+		padding-inline-start: 1.7em;
+	}
+	
+	ul > li {
+		padding-left: 0.1em;
+	}
+	
+	ol {
+		padding-inline-start: 1.6em;
+	}
+	
+	ol > li {
+		padding-left: 0.2em;
+	}
+	
+	.mono ol {
+		padding-inline-start: 2em;
+	}
+	
+	.mono ol > li {
+		text-indent: -0.4em;
+	}
+	
+	.toggle {
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
+	
+	.selected-value {
+		display: inline-block;
+		padding: 0 0.5em;
+		background: rgba(206, 205, 202, 0.5);
+		border-radius: 3px;
+		margin-right: 0.5em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+		white-space: nowrap;
+	}
+	
+	.collection-title {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	.simple-table {
+		margin-top: 1em;
+		font-size: 0.875rem;
+		empty-cells: show;
+	}
+	.simple-table td {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table th {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table-header-color {
+		background: rgb(247, 246, 243);
+		color: black;
+	}
+	.simple-table-header {
+		font-weight: 500;
+	}
+	
+	time {
+		opacity: 0.5;
+	}
+	
+	.icon {
+		display: inline-block;
+		max-width: 1.2em;
+		max-height: 1.2em;
+		text-decoration: none;
+		vertical-align: text-bottom;
+		margin-right: 0.5em;
+	}
+	
+	img.icon {
+		border-radius: 3px;
+	}
+	
+	.user-icon {
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 100%;
+		margin-right: 0.5rem;
+	}
+	
+	.user-icon-inner {
+		font-size: 0.8em;
+	}
+	
+	.text-icon {
+		border: 1px solid #000;
+		text-align: center;
+	}
+	
+	.page-cover-image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		max-height: 30vh;
+	}
+	
+	.page-header-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.page-header-icon-with-cover {
+		margin-top: -0.72em;
+		margin-left: 0.07em;
+	}
+	
+	.page-header-icon img {
+		border-radius: 3px;
+	}
+	
+	.link-to-page {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		font-weight: 500;
+	}
+	
+	p > .user {
+		opacity: 0.5;
+	}
+	
+	td > .user,
+	td > time {
+		white-space: nowrap;
+	}
+	
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		margin-right: 0.6em;
+		vertical-align: middle;
+	}
+	
+	p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.image {
+		border: none;
+		margin: 1.5em 0;
+		padding: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+	
+	.code,
+	code {
+		background: rgba(135, 131, 120, 0.15);
+		border-radius: 3px;
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 85%;
+		tab-size: 2;
+	}
+	
+	code {
+		color: #eb5757;
+	}
+	
+	.code {
+		padding: 1.5em 1em;
+	}
+	
+	.code-wrap {
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	
+	.code > code {
+		background: none;
+		padding: 0;
+		font-size: 100%;
+		color: inherit;
+	}
+	
+	blockquote {
+		font-size: 1.25em;
+		margin: 1em 0;
+		padding-left: 1em;
+		border-left: 3px solid rgb(55, 53, 47);
+	}
+	
+	.bookmark {
+		text-decoration: none;
+		max-height: 8em;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	.bookmark-title {
+		font-size: 0.85em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 1.75em;
+		white-space: nowrap;
+	}
+	
+	.bookmark-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bookmark-info {
+		flex: 4 1 180px;
+		padding: 12px 14px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.bookmark-image {
+		width: 33%;
+		flex: 1 1 180px;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		border-radius: 1px;
+	}
+	
+	.bookmark-description {
+		color: rgba(55, 53, 47, 0.6);
+		font-size: 0.75em;
+		overflow: hidden;
+		max-height: 4.5em;
+		word-break: break-word;
+	}
+	
+	.bookmark-href {
+		font-size: 0.75em;
+		margin-top: 0.25em;
+	}
+	
+	.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+	.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+	.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+	.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+	.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+	.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+	.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+	.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+	.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+	.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+	.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+	.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+	.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.highlight-default {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.highlight-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.highlight-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.highlight-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.highlight-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.highlight-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.highlight-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.highlight-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.highlight-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.highlight-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.highlight-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.highlight-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.highlight-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.highlight-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.highlight-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.highlight-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.highlight-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.highlight-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.block-color-default {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.block-color-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.block-color-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.block-color-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.block-color-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.block-color-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.block-color-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.block-color-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.block-color-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.block-color-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.block-color-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.block-color-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.block-color-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.block-color-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.block-color-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.block-color-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.block-color-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.block-color-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+	.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+	.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+	.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+	.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+	.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+	.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+	.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+	.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+	.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+	
+	.checkbox {
+		display: inline-flex;
+		vertical-align: text-bottom;
+		width: 16;
+		height: 16;
+		background-size: 16px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+	
+	.checkbox-on {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+	
+	.checkbox-off {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+		
+	</style></head><body><article id="bcf96a31-4094-423f-971a-28532c8c6a85" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🤖</span></div><h1 class="page-title">SDE Resources</h1></header><div class="page-body"><h2 id="11a85a8c-3024-429c-b304-155a77e4288f" class="">Context </h2><p id="c2a35436-4e45-48c1-935c-ebba0d0f9079" class="">Software Development is a huge area with subspecialties. This page aims to provide resources for anyone interested in a career transition into software development covering from educational resources to interview prep. </p><h3 id="78757213-bab4-4078-b328-f0d157b87d75" class="">General</h3><p id="421216c0-5b87-4fa4-9658-c8981925b559" class="">Here are the main components you will see on online resources:</p><p id="6986d653-3f98-41fb-ab60-dd377ea9a352" class="">Under software engineering here are the main concepts covered:</p><table id="e54a92e4-10fe-4537-829e-f62c6c7140e7" class="simple-table"><tbody><tr id="7587c8cb-576f-4233-a85c-8bb9a1b2ef6b"><td id="P\\^" class="">intro to programming</td><td id="{hXr" class="" style="width:564px">this is to introduce the basic foundations of software such as if else statements and for loops. This is to introduce a programming language to enable you to begin software</td></tr><tr id="1e44599a-b19f-4b26-8b31-57833da12070"><td id="P\\^" class="">database</td><td id="{hXr" class="" style="width:564px">this covers how data is stored, when we shut off our machine, our apps restart, to retain previous information, this is stored into a database. This section usually teaches querying languages like SQL</td></tr><tr id="2adc7884-c8f0-4513-8c03-7950fe4fe11f"><td id="P\\^" class="">data structures</td><td id="{hXr" class="" style="width:564px">this covers the basic types of structures available in coding for example, strings and integers are different in coding, and we have options to store them as a list etc..</td></tr><tr id="ef82f637-2104-4db1-b565-8cfe4b6b984c"><td id="P\\^" class="">algorithms</td><td id="{hXr" class="" style="width:564px">software is huge, so we learn about ways to optimize how we process large amount of information, the way of calculation/processing is called algorithms </td></tr><tr id="a7a819fa-d6ce-417c-ba66-b39131066e72"><td id="P\\^" class="">dev ops </td><td id="{hXr" class="" style="width:564px">after you write your first code, they need to be managed, saved, deployed so its available to other ppl. These tools you will learn are called git, github, docker continaers, kubernetes. Generally we don’t need an in-depth knowledge but enough to get things rolling. </td></tr><tr id="a9f6624c-0c99-4118-a83d-e3103eb1aaeb"><td id="P\\^" class="">testing</td><td id="{hXr" class="" style="width:564px">how do you make sure your code runs or doesn’t break anything else you or other people built? We write tests to make sure the code we write runs as expected. This is usually to learn about packages/methods for writing/running tests as we write code. </td></tr></tbody></table><p id="39202d51-f762-45da-b9b0-65cd727857c7" class="">You might also stumble into another very popular area called data science. While they are both in the technology domain, the skillsets and focus is slightly different: </p><table id="cffac7d4-7ebb-42f8-a97b-463ce292aa89" class="simple-table"><tbody><tr id="5db3bf52-2874-4caf-a364-f8ee91c4edc7"><td id="P\DO" class="">intro to python/R</td><td id="PSsH" class="" style="width:574px">most data science roles will require simple coding, when you have too much data, it will need to be done via coding as there is limit to what excel can do. </td></tr><tr id="f0d314b3-45aa-4baf-b626-3c0101243d3b"><td id="P\DO" class="">data analysis</td><td id="PSsH" class="" style="width:574px">you will usually learn how to analyze data, what this looks like is looking at a dataset, learning how to calculate median, averages, look for trends, graph out those trends and what conclusions you can drive from it. The common skills set under these are: Excel (to process data), SQL (to pull the data), tableau (to graph/visualize data) </td></tr><tr id="2d61e826-d635-4646-a9a1-3c8072d5b30a"><td id="P\DO" class="">machine learning concepts</td><td id="PSsH" class="" style="width:574px">a common theme in data science is to be able to drive business strategies with data, but with raw data there’s not much business decisions can be made from it, so often, data will be fed through ML models so that it can predict what could happen next. Often you will see concepts covered like neural networks, decision trees or linear regression. </td></tr></tbody></table><h3 id="eaf39971-df00-457d-b6fd-d8a9814520bd" class="">Backend vs Frontend vs Fullstack</h3><p id="36ed7881-37c2-43c1-ba34-2a9c72e143c4" class="">You will hear these terms a lot. While it is all software engineering and all three still codes, there are some slight nuances. </p><p id="be63c4ce-5ea6-4009-8865-d5b29a7bae8b" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong>Frontend</strong></strong></strong></strong></strong></strong></strong></strong></strong><div class="indented"><p id="4a417c25-6cd0-4f06-abb5-abab1ebe835a" class="">Typically refers to client side, this means they are usually working on the things you can see, such how the website layout looks, the interactions on the websites. This can include android/ios apps as well. Typically, keywords that will pop up are things like Javascript, React, Angular, HTML, CSS. </p></div></p><p id="ca337150-44c9-41d0-ab09-8335ed1b3f3a" class=""><strong><strong><strong><strong><strong><strong><strong>Backend</strong></strong></strong></strong></strong></strong></strong><div class="indented"><p id="97f56a7d-3b6e-4262-ad51-8c44d0ab9d4c" class="">This refers to the server side. Usually, when client side makes a call, they call the server to get all the needed information to display on the front end. There’s more emphasis on database and efficiency, if the server is slow, that’s when you see your page just loads for a very long time, which is why server side have to ensure they return what client side needs in a timely manner. Keywords that indicate more backend could be database, APIs, Java, C++. </p></div></p><p id="a2d86547-f0d1-446a-84bb-ade6aaa1d742" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong>Fullstack</strong></strong></strong></strong></strong></strong></strong></strong></strong><div class="indented"><p id="75761908-0319-40b0-9bb8-e9d0ffa332c6" class="">Fullstack refers to both frontend and backend. For example if you build your own website and has a server that connects to a database, this is typically fullstack. Fullstack just means the scope covers both client and server side. </p></div></p><h1 id="2ebf6639-2ed9-4638-aecd-6a163f5a3b4a" class="">Resources</h1><p id="ec1ff36e-dd2d-4f5a-8021-060f129858a6" class="">Here are a couple resources, free or paid. </p><table id="fc0dae18-e1a3-4433-a166-7b9dedc1effb" class="simple-table"><tbody><tr id="36984330-b8b9-4188-93be-e0e9ad5cda0e"><td id="urN`" class="">bootcamps</td><td id="CTPL" class="" style="width:571px">bootcamps are usually guided, there will be assigned instructors and a set timeline. </td><td id="f^Bq" class="" style="width:64px">$$$</td></tr><tr id="c1ddeda7-5815-4924-bb7a-68ee4cc22538"><td id="urN`" class="">online courses</td><td id="CTPL" class="" style="width:571px">online courses are less guided, these are videos with hw that are not graded, they are self pace as well. </td><td id="f^Bq" class="" style="width:64px">free-$</td></tr><tr id="e771142e-a334-41d1-9604-a2a17d44f01e"><td id="urN`" class="">textbooks </td><td id="CTPL" class="" style="width:571px">these are just some of the books that have been recommended by colleagues</td><td id="f^Bq" class="" style="width:64px">free-$</td></tr><tr id="c6166f53-459f-4ff7-a10b-8d61c945e9f8"><td id="urN`" class="">interviews</td><td id="CTPL" class="" style="width:571px">here are the general guidelines for interviews base on my own experience</td><td id="f^Bq" class="" style="width:64px">free </td></tr></tbody></table><h3 id="2f157a0e-83c3-4126-aa61-be516dfe79a3" class="">Bootcamps</h3><p id="ee373a42-d73d-495a-bf9d-079c8e95cd3c" class="">In general, bootcamps can be anywhere from 10 weeks to 6 months dependent on the program. Price-wise they usually fall around 10k range as well. Bootcamps are usually intensive, designed to teach you the minimum, enough to get you started and enough to get you to the interview stage. They usually cover all the main concepts listed above, but you will still need to put in work to grow your own portfolio and study algorithms to pass coding tests in interviews. </p><figure id="eac4ee8c-fe3a-4c13-8ad3-d7f58b3f49d4" class="link-to-page"><a href="sde_resources/bootcamp_resources.html"><span class="icon">🏕️</span>Bootcamp Resources</a></figure><figure id="071cdf0e-9b40-4a47-b501-75145435c441" class="link-to-page"><a href="sde_resources/my_experience_in_bootcamp.html"><span class="icon">👷‍♀️</span>My Experience in Bootcamp</a></figure><h3 id="764d74da-05ef-40a6-8404-778d8e9dc2fb" class="">Online Courses</h3><p id="e50e90fe-99f5-4e27-ad93-7ee1f15d2281" class="">Online courses, imo, are a great way to get an introduction to what the industry is like. Most online courses will cover the introductory courses like programming or data structure and algorithms. They are often free to 50$ range, dependent on the certificate and who is providing the certificate. </p><figure id="517b1e8f-3c11-4f7c-b721-9a1fe3cd6a23" class="link-to-page"><a href="sde_resources/online_courses.html"><span class="icon">📔</span>Online Courses</a></figure><h3 id="5da91c9c-c7f8-4e8c-85a3-903957ab8738" class="">Textbooks </h3><p id="45238296-a00c-477e-8d48-012e058d4241" class="">Textbooks, imo, are great to supplement if you have a firm grasp on introductory topics. This is because in the form of textbook, it doesn’t quite provide the guidance of setting up your machine and coding. But in exchange, in my experience, they cover more theoretical concepts such as explaining more in-depth into databases and memory, these are topics practical software engineering will not touch on as often. </p><figure id="ea5b4530-fb87-4469-bfe8-0403481ac72d" class="link-to-page"><a href="sde_resources/textbooks.html"><span class="icon">📚</span>Textbooks </a></figure><h3 id="90adc2f5-4823-4af0-9190-1ae155cd95fb" class="">Interviews</h3><p id="e703fbec-2e2e-43ce-8772-f2a7aaf938a9" class="">This is just a general guideline for getting ready for interviews, a bit of tips and lookouts on resume, linkedin, getting interviews and going through interviews. </p><figure id="3c2dd2de-f9f8-4e1f-b9f9-e1501a000e55" class="link-to-page"><a href="sde_resources/interview_prep_guideline.html"><span class="icon">👔</span>Interview Prep Guidelines</a></figure><p id="880c9f14-86e0-42f5-86ed-edc6e4fb0a44" class="">
+	</p></div></article></body></html>
